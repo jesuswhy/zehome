@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZeHome</title>
+    <title>ProKaspi</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Подключение иконок Font Awesome для подвала -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-d+oPUjyzsLsPPd6X7eDf1g1H+XJfqTLwhT38UBpAqQg8F1D8XoM9H8G+bS7v7jtZNVtvfVwxn+jEO/UhJmYw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="scripts.js"></script>
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="logo">ZeHome</div>
+            <div class="logo">ProKaspi</div>
             <ul class="nav-links">
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Цены</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#categories">Категории</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
             <button class="get-tickets-btn">Оставить заявку</button>
         </nav>
@@ -22,15 +26,111 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">ZeHome</h1>
-            <p class="hero-subtitle">Открытие категорий на KASPI.KZ </p>
-            <p class="hero-date">Официально. По договору</p>
+            <h1 class="hero-title">ProKaspi</h1>
+            <p class="hero-subtitle">Открытие категорий на KASPI.KZ</p>
+            <p class="hero-date">Официально. По договору.</p>
             <button class="cta-button">Оставить заявку</button>
         </div>
     </section>
 
+    <!-- О нас -->
+    <section id="about" class="about-section">
+        <h2>О нас</h2>
+        <p>Мы специализируемся на помощи продавцам для открытия категорий на маркетплейсе KASPI.KZ. Наш опыт и профессионализм позволяют вам сосредоточиться на продажах, а мы занимаемся бюрократией.</p>
+        <img src="https://cdn.leroymerlin.ru/lmru/image/upload/f_auto/q_auto/dpr_1.0/c_pad/w_1000/h_1000/v1586312126/lmcode/ZHedmVXH80-D8df6Dx_hAQ/82274582.png" alt="О нас изображение" class="responsive-img">
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services-section">
+        <h2>Услуги</h2>
+        <ul class="services-list">
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/128/1621/1621997.png" alt="Иконка регистрации" class="service-icon">
+                Помощь в регистрации
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/128/4989/4989752.png" alt="Иконка открытия категорий" class="service-icon">
+                Открытие категорий
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/128/975/975653.png" alt="Иконка консультаций" class="service-icon">
+                Консультации по продажам
+            </li>
+        </ul>
+    </section>
+
+    <!-- Категории -->
+    <section id="categories" class="categories-section">
+        <h2>Категории</h2>
+        <div class="category-list">
+            <div class="category-item" data-category="electronics">
+                <img src="https://www.ixbt.com/img/n1/news/2024/5/5/image%20(89)_large.png" alt="Электроника" class="responsive-img">
+                <p>Электроника</p>
+            </div>
+            <div class="category-item" data-category="fashion">
+                <img src="https://icdn.lenta.ru/images/2020/08/17/13/20200817133818369/wide_4_3_8448cbc46e850bcd4b4e44df9787ce92.png" alt="Мода" class="responsive-img">
+                <p>Мода</p>
+            </div>
+            <div class="category-item" data-category="home">
+                <img src="https://storeinteriors.ru/wp-content/uploads/ZARA-HOME_5-780x780-1.jpg" alt="Дом" class="responsive-img">
+                <p>Товары для дома</p>
+            </div>
+        </div>
+
+        <!-- Карточка подкатегорий -->
+        <div id="category-card" class="category-card" style="display: none;">
+            <h3 id="category-title">Выберите подкатегорию</h3>
+            <div id="subcategory-list" class="subcategory-list"></div>
+            <div id="subcategory-selector" class="subcategory-selector" style="display: none;">
+                <select id="subcategories">
+                    <option value="">Выберите подкатегорию</option>
+                </select>
+                <button id="calculate-price">Рассчитать цену</button>
+                <p id="price-output"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обратная связь -->
+    <section id="contact" class="contact-section">
+        <h2>Обратная связь</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш Email" required>
+            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
     <footer class="footer">
-        <p>&copy; 2024 ZeHome. Все права защищены.</p>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>ProKaspi</h3>
+                <p>Помогаем продавцам открыть категории на маркетплейсе KASPI.KZ.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#categories">Категории</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>Email: info@prokaspi.kz</p>
+                <p>Телефон: +7 (777) 123-45-67</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ProKaspi. Все права защищены.</p>
+        </div>
     </footer>
 </body>
 </html>
