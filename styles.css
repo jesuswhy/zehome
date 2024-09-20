@@ -447,3 +447,62 @@ img {
         text-align: center;
     }
 }
+
+
+/* Для планшетов */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .services-list {
+        flex-direction: column;
+    }
+
+    .category-list {
+        flex-direction: column;
+    }
+
+    .category-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .category-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
