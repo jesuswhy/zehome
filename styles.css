@@ -1,3 +1,4 @@
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +9,20 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    line-height: 1.6;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Хедер */
 .header {
     background-color: #fff;
     padding: 10px 20px;
@@ -63,6 +76,7 @@ body {
     background-color: #005bb5;
 }
 
+/* Хиро-секция */
 .hero {
     display: flex;
     justify-content: center;
@@ -107,12 +121,329 @@ body {
     background-color: #005bb5;
 }
 
+/* Секция "О нас" */
+.about-section {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.about-section img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* Секция "Услуги" */
+.services-section {
+    padding: 80px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.services-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Секция "Категории" */
+.categories-section {
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.categories-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    width: 250px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.responsive-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Карточка подкатегорий */
+.category-card {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.category-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.subcategory-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.subcategory-item {
+    width: 200px;
+    text-align: center;
+}
+
+.subcategory-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.subcategory-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.subcategory-selector {
+    margin-top: 30px;
+}
+
+#subcategory-selector select {
+    padding: 10px;
+    font-size: 1rem;
+    width: 60%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#subcategory-selector button {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#subcategory-selector button:hover {
+    background-color: #005bb5;
+}
+
+#price-output {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Секция "Обратная связь" */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #e0e0e0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-section button {
+    padding: 12px 20px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #005bb5;
+}
+
+/* Подвал */
 .footer {
     background-color: #333;
     color: #fff;
+    padding: 40px 20px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #ccc;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0070f3;
+}
+
+.footer-bottom {
     text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .category-list,
+    .subcategory-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-item,
+    .subcategory-item {
+        width: 80%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
 }
