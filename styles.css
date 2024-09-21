@@ -499,24 +499,22 @@ img {
     color: #aaa;
 }
 
-/* Медиа-запросы для адаптивности */
+
+/* Для планшетов */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .nav-links {
-        flex-direction: column;
-        width: 100%;
+        display: none; /* Скрыть навигацию и кнопку на маленьких экранах */
     }
 
-    .nav-links li {
-        width: 100%;
-        text-align: left;
+    .get-tickets-btn {
+        display: none; /* Скрыть навигацию и кнопку на маленьких экранах */
     }
 
-    .category-list,
+    .footer-section {
+        display: none; /* Скрыть навигацию и кнопку на маленьких экранах */
+    }
+
+   .category-list,
     .subcategory-list {
         flex-direction: column;
         align-items: center;
@@ -535,15 +533,8 @@ img {
     .footer-section {
         text-align: center;
     }
-}
 
 
-/* Для планшетов */
-@media (max-width: 768px) {
-    .nav-links,
-    .get-tickets-btn {
-        display: none; /* Скрыть навигацию и кнопку на маленьких экранах */
-    }
 
     .logo {
         text-align: center;
@@ -571,11 +562,7 @@ img {
         flex-direction: column;
         align-items: center;
     }
-}
 
-.nav-links,
-.get-tickets-btn {
-    display: flex;
 }
 
 
