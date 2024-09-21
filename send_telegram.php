@@ -1,7 +1,7 @@
 <?php
 
 function sendTelegramMessage($chat_id, $message) {
-    $token = 'YOUR_BOT_TOKEN'; // Ваш токен бота
+    $token = '7330741611:AAH76gbLhOM5RgqK4jfIT5p9ZDLusQMDceg'; // Ваш токен бота
     $url = "https://api.telegram.org/bot$token/sendMessage";
 
     $data = [
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $text = "Новое сообщение от пользователя:\nИмя: $name\nEmail: $email\nСообщение: $message";
 
     // Отправка сообщения в Telegram
-    $chat_id = 'YOUR_CHAT_ID'; // Ваш Chat ID
+    $chat_id = '667861609'; // Ваш Chat ID
     $result = sendTelegramMessage($chat_id, $text);
 
     // Проверяем успешность отправки и выводим отладочную информацию
