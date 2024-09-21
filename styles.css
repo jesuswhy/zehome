@@ -233,7 +233,8 @@ img {
 }
 
 .category-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -251,6 +252,30 @@ img {
     cursor: pointer;
 }
 
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(255, 255, 255);
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.accordion {
+    background-color: #0070f3;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.accordion:hover {
+    background-color: #ddd;
+}
+
+
 .category-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -258,7 +283,7 @@ img {
 
 .category-item.active {
     border-color: #0070f3;
-    background-color: #e0f7ff;
+    background-color: #ffffff;
 }
 
 .responsive-img {
@@ -292,7 +317,7 @@ img {
     max-height: 400px;
     overflow-y: auto;  /* Скролл для подкатегорий */
     padding: 10px;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -315,6 +340,16 @@ img {
     background-color: #0070f3;
     color: white;
     box-shadow: 0 4px 12px rgba(0, 112, 243, 0.2);
+}
+
+.subcategory-list label {
+    display: block;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+.subcategory-list label:hover {
+    background-color: #e0f0ff;
 }
 
 /* Кнопка "Рассчитать цену" */
