@@ -18,6 +18,7 @@
                 <li><a href="#categories">Категории</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
+            
             <button class="get-tickets-btn">Оставить заявку</button>
         </nav>
     </header>
@@ -26,7 +27,7 @@
         <div class="hero-content">
             <h1 class="hero-title">KASCAT</h1>
             <p class="hero-subtitle">Открытие категорий на KASPI.KZ</p>
-            <p class="hero-date">Официально. По договору.</p>
+            <p class="hero-date">Официально. По договору</p>
             <button class="cta-button">Оставить заявку</button>
         </div>
     </section>
@@ -35,7 +36,7 @@
     <section id="about" class="about-section">
         <h2>О нас</h2>
         <img src="https://i.pinimg.com/564x/81/15/1d/81151d75f7f36e56592c890fbd6c50b1.jpg" alt="О нас изображение" class="responsive-img">
-        <p>Мы - команда действующих продавцов на KASPI.KZ. Наш оборот за последние 3 месяца составил более 400 млн. тенге. Мы знаем о продажах на маркетплейсе всё.</p>
+        <p>Мы - команда действующих продавцов на KASPI.KZ. Наш оборот за последние 3 месяца составил более 400 млн тенге. Мы знаем о продажах на маркетплейсе всё.</p>
     </section>
 
     <!-- Услуги -->
@@ -56,34 +57,81 @@
             </li>
         </ul>
     </section>
-
-    <!-- Категории -->
     <section id="categories" class="categories-section">
         <h2>Категории</h2>
-        <div class="category-list">
-            <div class="category-item" data-category="electronics">
-                <img src="https://www.ixbt.com/img/n1/news/2024/5/5/image%20(89)_large.png" alt="Электроника" class="responsive-img">
-                <p>Электроника</p>
-            </div>
-            <div class="category-item" data-category="fashion">
-                <img src="https://img.freepik.com/free-photo/green-front-sweater_125540-736.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1726444800&semt=ais_hybrid" alt="Мода" class="responsive-img">
-                <p>Мода</p>
-            </div>
-            <div class="category-item" data-category="home">
-                <img src="https://main-cdn.sbermegamarket.ru/big1/hlr-system/814/782/573/122/118/10/600009676375b0.jpeg" alt="Дом" class="responsive-img">
-                <p>Товары для дома</p>
-            </div>
+    
+        <!-- Search bar for categories -->
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Поиск по категориям и подкатегориям...">
         </div>
-
-    <!-- Карточка подкатегорий -->
-    <div id="subcategory-selector">
-        <h3>Выберите подкатегории:</h3>
-        <div id="subcategory-list"></div>
-        <button id="calculate-price">Рассчитать цену</button>
-        <p id="price-output"></p>
-        <button id="leave-request">Оставить заявку</button>
-    </div>
-</section>
+    
+        <!-- Accordion for Categories -->
+        <div class="category-list">
+            <div class="category-item">
+                <button class="accordion">Электроника</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Смартфоны"> Смартфоны</label>
+                        <label><input type="checkbox" value="Ноутбуки"> Ноутбуки</label>
+                        <label><input type="checkbox" value="Телевизоры"> Телевизоры</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Страпоны</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Смартфоны"> Смартфоны</label>
+                        <label><input type="checkbox" value="Ноутбуки"> Ноутбуки</label>
+                        <label><input type="checkbox" value="Телевизоры"> Телевизоры</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Косметика</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Смартфоны"> Смартфоны</label>
+                        <label><input type="checkbox" value="Ноутбуки"> Ноутбуки</label>
+                        <label><input type="checkbox" value="Телевизоры"> Телевизоры</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Удавки</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Смартфоны"> Смартфоны</label>
+                        <label><input type="checkbox" value="Ноутбуки"> Ноутбуки</label>
+                        <label><input type="checkbox" value="Телевизоры"> Телевизоры</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Фалоимитаторы</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Смартфоны"> Смартфоны</label>
+                        <label><input type="checkbox" value="Ноутбуки"> Ноутбуки</label>
+                        <label><input type="checkbox" value="Телевизоры"> Телевизоры</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Мода</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Одежда"> Одежда</label>
+                        <label><input type="checkbox" value="Обувь"> Обувь</label>
+                        <label><input type="checkbox" value="Аксессуары"> Аксессуары</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more categories as needed -->
+        </div>
+        <p id="price-output">Итоговая цена: 0 тенге</p>
+        <button id="leave-request">Открыть категории</button>
+    </section>
 
         <!-- Секция FAQ -->
         <section id="faq" class="faq-section">
@@ -101,14 +149,14 @@
     <!-- Обратная связь -->
     <section id="contact" class="contact-section">
         <h2>Оставьте заявку</h2>
-        <form id="contactForm" method="POST">
+        <form id="contact-form">
             <input type="text" name="name" placeholder="Ваше имя" required>
-            <input type="email" name="email" placeholder="Ваш email" required>
-            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
-            <button type="button" id="submitBtn">Отправить</button>
+            <input type="phone" name="phone" placeholder="Ваш номер телефона" required>
+            <textarea name="message" id="message" placeholder="Ваше сообщение" required></textarea>
+            <button type="submit" id="submitBtn">Отправить</button>
         </form>
-        <div id="responseMessage"></div> <!-- Для отображения ответа -->
     </section>
+
 
     <footer class="footer">
         <div class="footer-container">
@@ -142,30 +190,3 @@
     </footer>
 </body>
 </html>
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#submitBtn').click(function() {
-        const formData = {
-            name: $('input[name="name"]').val(),
-            email: $('input[name="email"]').val(),
-            message: $('textarea[name="message"]').val()
-        };
-
-        $.ajax({
-            type: 'POST',
-            url: 'send_telegram.php',
-            data: formData,
-            success: function(response) {
-                $('#responseMessage').html(response); // Отображаем ответ
-                $('#contactForm')[0].reset(); // Очищаем форму
-            },
-            error: function() {
-                $('#responseMessage').html('Ошибка при отправке сообщения.');
-            }
-        });
-    });
-});
-</script>
