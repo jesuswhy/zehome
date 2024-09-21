@@ -93,22 +93,22 @@
                 <p>Мы помогаем открыть категории на KASPI.KZ официально.</p>
             </details>
             <details>
-                <summary>Как долго занимает процесс?</summary>
+                <summary>Как много времени занимает процесс?</summary>
                 <p>Процесс открытия категорий занимает от 3 до 7 дней.</p>
             </details>
         </section>
 
-<!-- Обратная связь -->
-<section id="contact" class="contact-section">
-    <h2>Обратная связь</h2>
-    <form id="contact-form">
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="email" name="email" placeholder="Ваш Email" required>
-        <textarea name="message" id="message" placeholder="Ваше сообщение" required></textarea>
-        <button type="submit">Отправить</button>
-    </form>
-</section>
-
+    <!-- Обратная связь -->
+    <section id="contact" class="contact-section">
+        <h2>Оставьте заявку</h2>
+        <form id="contactForm" method="POST">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+            <button type="button" id="submitBtn">Отправить</button>
+        </form>
+        <div id="responseMessage"></div> <!-- Для отображения ответа -->
+    </section>
 
     <footer class="footer">
         <div class="footer-container">
@@ -142,3 +142,30 @@
     </footer>
 </body>
 </html>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#submitBtn').click(function() {
+        const formData = {
+            name: $('input[name="name"]').val(),
+            email: $('input[name="email"]').val(),
+            message: $('textarea[name="message"]').val()
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: 'send_telegram.php',
+            data: formData,
+            success: function(response) {
+                $('#responseMessage').html(response); // Отображаем ответ
+                $('#contactForm')[0].reset(); // Очищаем форму
+            },
+            error: function() {
+                $('#responseMessage').html('Ошибка при отправке сообщения.');
+            }
+        });
+    });
+});
+</script>
