@@ -59,3 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
     });
 });
+
+document.getElementById('menu-icon').addEventListener('click', function() {
+    var navbar = document.getElementById('navbar');
+    if (navbar.classList.contains('hidden')) {
+        navbar.classList.remove('hidden');
+    } else {
+        navbar.classList.add('hidden');
+    }
+});
