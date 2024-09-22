@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         totalPrice -= totalPrice * discount;
-        document.getElementById("price-output").textContent = `Итоговая цена: ${totalPrice} тенге (Скидка: ${discount * 100}%)`;
+        document.getElementById("price-output").textContent = `Итоговая цена: ${totalPrice} ₸ (Скидка: ${discount * 100}%)`;
     };
 
     // Привязываем событие изменения к каждому чекбоксу
