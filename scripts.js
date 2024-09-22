@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Динамическое обновление цены при изменении выбора подкатегорий
     const updatePrice = () => {
         const selectedSubcategories = document.querySelectorAll('.subcategory-list input[type="checkbox"]:checked');
-        let totalPrice = selectedSubcategories.length * 1000; // Базовая цена за каждую подкатегорию
+        let totalPrice = selectedSubcategories.length * 10000; // Базовая цена за каждую подкатегорию
         let discount = 0;
 
         // Применение скидок в зависимости от количества выбранных подкатегорий
