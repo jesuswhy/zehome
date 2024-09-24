@@ -131,7 +131,7 @@ img {
     background: linear-gradient(135deg, #0070f3, #00c6ff, #0070f3); /* The gradient colors */
     background-clip: text; /* Clipping the background to the text */
     -webkit-background-clip: text; /* For Safari */
-    font-size: 24px;
+    font-size: 130px;
     font-weight: bold;
     animation: shimmer 2s infinite; /* Applying the animation */
     background-size: 400px 100%; /* Size of the gradient */
