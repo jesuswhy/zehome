@@ -47,6 +47,7 @@
                 <img src="https://resources.cdn-kaspi.kz/img/cnt/mc/l/e796543c-e261-4242-8087-942667615e3e/logo?format=merchant_logo" alt="Магазин 2">
             </a>
         </div>
+        <span style="color: #adadad;">нажмите, чтобы открыть</span> <!-- Цвет текста задан здесь -->
     </section>
 
     <!-- Услуги -->
@@ -195,7 +196,7 @@
             const message = document.getElementById('message').value;
 
             // Ваш токен бота и ID чата
-            const botToken = ''; // Замените на свой токен
+            const botToken = '7303728566:AAEsrY883Hy8n0zyHmpfu1j7mx-16LW-q5I'; // Замените на свой токен
             const chatId = '-1002151438870'; // Замените на свой чат ID
 
             // Формируем сообщение
@@ -227,73 +228,63 @@
     </script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Accordion functionality
-        const accordions = document.querySelectorAll(".accordion");
-        accordions.forEach(acc => {
-            acc.addEventListener("click", function() {
-                this.classList.toggle("active");
-                const panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        });
-
-            document.getElementById("clear-selection").addEventListener("click", () => {
-        const checkboxes = document.querySelectorAll('.subcategory-list input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-            checkbox.checked = false;
-        });
-        updatePrice(); // Обновляем итоговую цену после очистки
-    });
-
-        // Define unique prices for each subcategory
-        const subcategoryPrices = {
-            "Смартфоны": 15000,
-            "Ноутбуки": 20000,
-            "Телевизоры": 18000,
-            "Кремы": 12000,
-            "Парфюм": 14000
-        };
-
-        // Update price based on selected subcategories
-        const updatePrice = () => {
-            const selectedSubcategories = document.querySelectorAll('.subcategory-list input[type="checkbox"]:checked');
-            let totalPrice = 0;
-            let discount = 0;
-
-            // Calculate the total price based on unique prices for each subcategory
-            selectedSubcategories.forEach(subcategory => {
-                const subcategoryName = subcategory.value;
-                totalPrice += subcategoryPrices[subcategoryName] || 10000; // Default price if no specific price is defined
-            });
-
-            // Apply discount based on number of selected subcategories
-            if (selectedSubcategories.length === 2) {
-                discount = 0.1; // 10% discount for 2 subcategories
-            } else if (selectedSubcategories.length >= 3) {
-                discount = 0.3; // 30% discount for 3 or more subcategories
-            }
-
-            totalPrice -= totalPrice * discount;
-            document.getElementById("price-output").textContent = `Итоговая цена: ${totalPrice} ₸ (Скидка: ${discount * 100}%)`;
-        };
-
-        // Attach the event listener to all checkboxes
-        document.querySelectorAll('.subcategory-list input[type="checkbox"]').forEach(checkbox => {
-            checkbox.addEventListener('change', updatePrice);
-        });
-
-        // Functionality to fill the request message and smooth scroll to contact section
-        document.getElementById("leave-request").addEventListener("click", () => {
-            const selectedItems = Array.from(document.querySelectorAll('.subcategory-list input[type="checkbox"]:checked')).map(item => item.value);
-            document.getElementById("message").value = `Интересуют категории: ${selectedItems.join(", ")}`;
-            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+document.addEventListener("DOMContentLoaded", () => {
+    // Accordion functionality
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(acc => {
+        acc.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
         });
     });
+
+    // Define unique prices for each subcategory
+    const subcategoryPrices = {
+        "Смартфоны": 15000,
+        "Ноутбуки": 20000,
+        "Телевизоры": 18000,
+        "Кремы": 12000,
+        "Парфюм": 14000
+    };
+
+    // Update price based on selected subcategories
+    const updatePrice = () => {
+        const selectedSubcategories = document.querySelectorAll('.subcategory-list input[type="checkbox"]:checked');
+        let totalPrice = 0;
+        let discount = 0;
+
+        selectedSubcategories.forEach(subcategory => {
+            totalPrice += subcategoryPrices[subcategory.value] || 10000; // Установка цены по умолчанию
+        });
+
+        // Применение скидки
+        if (selectedSubcategories.length === 2) {
+            discount = 0.1; // 10% скидка
+        } else if (selectedSubcategories.length >= 3) {
+            discount = 0.3; // 30% скидка
+        }
+
+        totalPrice -= totalPrice * discount;
+        document.getElementById("price-output").textContent = `Итоговая цена: ${totalPrice} ₸ (Скидка: ${discount * 100}%)`;
+    };
+
+    // Привязка события изменения к чекбоксам
+    document.querySelectorAll('.subcategory-list input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', updatePrice);
+    });
+
+    // Обновление цены при загрузке страницы
+    updatePrice();
+
+    // Функциональность для заявки
+    document.getElementById("leave-request").addEventListener("click", () => {
+        const selectedItems = Array.from(document.querySelectorAll('.subcategory-list input[type="checkbox"]:checked')).map(item => item.value);
+        document.getElementById("message").value = `Интересуют категории: ${selectedItems.join(", ")}`;
+        document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    });
+});
+
 </script>
 
 
