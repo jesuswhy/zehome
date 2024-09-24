@@ -1,21 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-    
-
-    // Привязываем событие изменения к каждому чекбоксу
-    document.querySelectorAll('.subcategory-list input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', updatePrice);
-    });
-    
-    
-    // Функциональность для заявки
-    document.getElementById("leave-request").addEventListener("click", () => {
-        const selectedItems = Array.from(document.querySelectorAll('.subcategory-list input[type="checkbox"]:checked')).map(item => item.value);
-        document.getElementById("message").value = `Интересуют категории: ${selectedItems.join(", ")}`;
-        document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-    });
-});
-
 
 
 
