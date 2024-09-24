@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KASCAT</title>
@@ -28,12 +29,24 @@
             <p class="hero-date">Официально. По договору</p>
         </div>
     </section>
+    
 
     <!-- О нас -->
     <section id="about" class="about-section">
         <h2>О нас</h2>
         <img src="https://i.postimg.cc/vH3tCQ89/IMG-20240922-141057.jpg" alt="О нас изображение" class="responsive-img">
         <p>Мы - команда действующих продавцов на KASPI.KZ. Наш оборот за последние 3 месяца составил более 400 млн тенге. Мы знаем о продажах на маркетплейсе всё.</p>
+
+
+        <h3>Наши магазины:</h3>
+        <div class="shop-links">
+            <a href="https://kaspi.kz/shop/info/merchant/11686000/address-tab/?merchantId=11686000&ref=shared_link" target="_blank">
+                <img src="https://resources.cdn-kaspi.kz/img/cnt/mc/l/6e054db0-cfe1-48fa-a777-8ede8b406f4f/logo?format=merchant_logo" alt="Магазин 1">
+            </a>
+            <a href="https://kaspi.kz/shop/info/merchant/zecar/address-tab/?merchantId=Zecar&ref=shared_link" target="_blank">
+                <img src="https://resources.cdn-kaspi.kz/img/cnt/mc/l/e796543c-e261-4242-8087-942667615e3e/logo?format=merchant_logo" alt="Магазин 2">
+            </a>
+        </div>
     </section>
 
     <!-- Услуги -->
@@ -55,6 +68,8 @@
         </ul>
     </section>
 
+
+    
     
 
     <section id="categories" class="categories-section">
@@ -80,46 +95,6 @@
                 </div>
             </div>
             <div class="category-item">
-                <button class="accordion">Электроника</button>
-                <div class="panel">
-                    <div class="subcategory-list">
-                        <label><input type="checkbox" value="Смартфоны"> Смартфоны</label>
-                        <label><input type="checkbox" value="Ноутбуки"> Ноутбуки</label>
-                        <label><input type="checkbox" value="Телевизоры"> Телевизоры</label>
-                    </div>
-                </div>
-            </div>
-            <div class="category-item">
-                <button class="accordion">Электроника</button>
-                <div class="panel">
-                    <div class="subcategory-list">
-                        <label><input type="checkbox" value="Смартфоны"> Смартфоны</label>
-                        <label><input type="checkbox" value="Ноутбуки"> Ноутбуки</label>
-                        <label><input type="checkbox" value="Телевизоры"> Телевизоры</label>
-                    </div>
-                </div>
-            </div>
-            <div class="category-item">
-                <button class="accordion">Электроника</button>
-                <div class="panel">
-                    <div class="subcategory-list">
-                        <label><input type="checkbox" value="Смартфоны"> Смартфоны</label>
-                        <label><input type="checkbox" value="Ноутбуки"> Ноутбуки</label>
-                        <label><input type="checkbox" value="Телевизоры"> Телевизоры</label>
-                    </div>
-                </div>
-            </div>
-            <div class="category-item">
-                <button class="accordion">Электроника</button>
-                <div class="panel">
-                    <div class="subcategory-list">
-                        <label><input type="checkbox" value="Смартфоны"> Смартфоны</label>
-                        <label><input type="checkbox" value="Ноутбуки"> Ноутбуки</label>
-                        <label><input type="checkbox" value="Телевизоры"> Телевизоры</label>
-                    </div>
-                </div>
-            </div>
-            <div class="category-item">
                 <button class="accordion">Косметика</button>
                 <div class="panel">
                     <div class="subcategory-list">
@@ -133,6 +108,7 @@
         <p id="price-output">Итоговая цена: 0 ₸</p>
         <button id="leave-request">Открыть категории</button>
     </section>
+    
     
 
         <!-- Секция FAQ -->
@@ -183,16 +159,16 @@
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-section2">
                 <h3>Контакты</h3>
-                <p>Email: info@KASCAT.kz</p>
-                <p>Телефон: +7 (777) 123-45-67</p>
+                <p>Телефон: +7 (747) 872-44-44</p>
+                <p>Телефон: +7 (705) 403-77-27</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/" target="_blank"><i class="fab fa-telegram-plane"></i></a>
                 </div>
-            </div>
+            </div>     
+                 
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 KASCAT. Все права защищены.</p>
@@ -209,7 +185,7 @@
             const message = document.getElementById('message').value;
 
             // Ваш токен бота и ID чата
-            const botToken = ''; // Замените на свой токен
+            const botToken = '7303728566:AAEsrY883Hy8n0zyHmpfu1j7mx-16LW-q5I'; // Замените на свой токен
             const chatId = '-1002151438870'; // Замените на свой чат ID
 
             // Формируем сообщение
@@ -240,5 +216,78 @@
         });
     </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Accordion functionality
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach(acc => {
+            acc.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        });
+
+            document.getElementById("clear-selection").addEventListener("click", () => {
+        const checkboxes = document.querySelectorAll('.subcategory-list input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+        updatePrice(); // Обновляем итоговую цену после очистки
+    });
+
+        // Define unique prices for each subcategory
+        const subcategoryPrices = {
+            "Смартфоны": 15000,
+            "Ноутбуки": 20000,
+            "Телевизоры": 18000,
+            "Кремы": 12000,
+            "Парфюм": 14000
+        };
+
+        // Update price based on selected subcategories
+        const updatePrice = () => {
+            const selectedSubcategories = document.querySelectorAll('.subcategory-list input[type="checkbox"]:checked');
+            let totalPrice = 0;
+            let discount = 0;
+
+            // Calculate the total price based on unique prices for each subcategory
+            selectedSubcategories.forEach(subcategory => {
+                const subcategoryName = subcategory.value;
+                totalPrice += subcategoryPrices[subcategoryName] || 10000; // Default price if no specific price is defined
+            });
+
+            // Apply discount based on number of selected subcategories
+            if (selectedSubcategories.length === 2) {
+                discount = 0.1; // 10% discount for 2 subcategories
+            } else if (selectedSubcategories.length >= 3) {
+                discount = 0.3; // 30% discount for 3 or more subcategories
+            }
+
+            totalPrice -= totalPrice * discount;
+            document.getElementById("price-output").textContent = `Итоговая цена: ${totalPrice} ₸ (Скидка: ${discount * 100}%)`;
+        };
+
+        // Attach the event listener to all checkboxes
+        document.querySelectorAll('.subcategory-list input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', updatePrice);
+        });
+
+        // Functionality to fill the request message and smooth scroll to contact section
+        document.getElementById("leave-request").addEventListener("click", () => {
+            const selectedItems = Array.from(document.querySelectorAll('.subcategory-list input[type="checkbox"]:checked')).map(item => item.value);
+            document.getElementById("message").value = `Интересуют категории: ${selectedItems.join(", ")}`;
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        });
+    });
+</script>
+
+
 </body>
 </html>
+
+
