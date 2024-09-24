@@ -1,9 +1,13 @@
+
+
 /* Общие стили */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -32,6 +36,8 @@ img {
     top: 0;
     z-index: 1000;
 }
+
+
 
 .navbar {
     display: flex;
@@ -119,13 +125,16 @@ img {
 }
 
 .hero-title {
-    font-size: clamp(4rem, 10vw, 8rem);
+    position: relative;
+    display: inline-block;
+    color: transparent; /* Makes the text transparent */
+    background: linear-gradient(135deg, #0070f3, #00c6ff, #0070f3); /* The gradient colors */
+    background-clip: text; /* Clipping the background to the text */
+    -webkit-background-clip: text; /* For Safari */
+    font-size: 24px;
     font-weight: bold;
-    background: linear-gradient(45deg, #0070f3, #00c6ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    animation: shimmer 2s infinite; /* Applying the animation */
+    background-size: 400px 100%; /* Size of the gradient */
 }
 
 .hero-subtitle {
@@ -246,13 +255,13 @@ img {
     padding: 20px;
 }
 
-.category-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
 }
 
 
@@ -283,13 +292,14 @@ img {
 
 
 .category-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .category-item.active {
-    border-color: #0070f3;
-    background-color: #ffffff;
+    background-color: #3a77ff;
+    color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .responsive-img {
@@ -352,39 +362,13 @@ img {
     background-color: #e0f0ff;
 }
 
-/* Кнопка "Рассчитать цену" */
-#calculate-price {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #0070f3;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
 #price-output {
     margin-top: 20px;
     font-size: 1.5rem;
     font-weight: bold;
 }
-#calculate-price:hover {
-    background-color: #005bb5;
-    transform: translateY(-2px);
-}
-#calculate-price {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0070f3;
-    color: white;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    text-align: center;
-}
+
 
 /* Секция "Обратная связь" */
 .contact-section {
@@ -451,6 +435,31 @@ img {
     min-width: 200px;
 }
 
+.footer-section2 {
+    flex: 1;
+    min-width: 200px;
+}
+
+
+
+#clear-selection {
+    background-color: #4a4a4a; /* Красный цвет кнопки */
+    color: white; /* Белый текст */
+    border: none; /* Убираем границу */
+    padding: 10px 20px; /* Пространство внутри кнопки */
+    text-align: center; /* Выравнивание текста */
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 5px; /* Округлённые углы */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s ease; /* Плавная смена цвета при наведении */
+    margin-top: 15px; /* Отступ сверху для удобства */
+}
+
+/* Стиль кнопки при наведении */
+#clear-selection:hover {
+    background-color: #d32f2f; /* Более тёмный оттенок красного при наведении */
+}
+
 .footer-section h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
@@ -476,21 +485,31 @@ img {
     color: #fff;
 }
 
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
+.footer-section2 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-.social-icons a {
+.footer-section2 p,
+.footer-section2 ul,
+.footer-section2 a {
+    font-size: 1rem;
     color: #ccc;
-    font-size: 1.2rem;
-    transition: color 0.3s;
+    margin-bottom: 10px;
 }
 
-.social-icons a:hover {
-    color: #0070f3;
+.footer-section2 ul {
+    list-style: none;
 }
+
+.footer-section2 ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section2 ul li a:hover {
+    color: #fff;
+}
+
 
 .footer-bottom {
     text-align: center;
@@ -503,8 +522,19 @@ html {
     scroll-behavior: smooth;
 }
 
-#calculate-price:hover {
-    background-color: #005bb5;
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(0, 112, 243, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 25px rgba(0, 112, 243, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(0, 112, 243, 0.3);
+    }
 }
 
 #leave-request {
@@ -517,14 +547,17 @@ html {
     cursor: pointer;
     border-radius: 50px;
     transition: all 0.3s ease;
+    animation: pulse 2s infinite; /* Apply the pulsing animation */
     box-shadow: 0 4px 15px rgba(0, 112, 243, 0.3);
 }
 
 #leave-request:hover {
     background: linear-gradient(135deg, #4caf50, #2fc173);
-    transform: scale(1.05);
+    transform: scale(1.1); /* Slightly larger scale on hover */
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    animation: none; /* Disable pulse on hover */
 }
+
 
 /* Скроллинг для блока категорий */
 .categories-section {
@@ -535,23 +568,9 @@ html {
     overflow: hidden;
 }
 
-/* Добавление плавного скроллинга для контактов */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Настройка кнопки прокрутки */
-.cta-button, .get-tickets-btn {
-    margin-top: 15px;
-}
-
 /* Для планшетов */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Скрыть навигацию и кнопку на маленьких экранах */
-    }
-
-    .leave-request {
         display: none; /* Скрыть навигацию и кнопку на маленьких экранах */
     }
 
@@ -559,16 +578,23 @@ html {
         display: none; /* Скрыть навигацию и кнопку на маленьких экранах */
     }
 
+    .leave-request {
+        display: none; /* Скрыть навигацию и кнопку на маленьких экранах */
+    }
+
+
     .get-tickets-btn {
         display: none; /* Скрыть навигацию и кнопку на маленьких экранах */
     }
 
 
    .category-list,
-    .subcategory-list {
-        flex-direction: column;
-        align-items: center;
-    }
+   .subcategory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
 
     .category-item,
     .subcategory-item {
@@ -584,6 +610,10 @@ html {
         text-align: center;
     }
 
+    .footer-section2 {
+        text-align: center;
+    }
+
 
 
     .logo {
@@ -592,7 +622,7 @@ html {
     }
 
     .hero-title {
-        font-size: 4rem;
+        font-size: 7rem;
     }
 
     .services-list {
@@ -670,4 +700,51 @@ html {
 #search-input:focus {
     border-color: #0070f3;
     outline: none;
+}
+
+
+.shop-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.shop-links a img {
+    width: 130px;
+    height: 80px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.shop-links a img:hover {
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    gap: 25px; /* Расстояние между иконками */
+    padding: 20px 0; /* Отступ сверху и снизу */
+}
+
+.social-icons a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #ededed; /* Цвет иконок */
+    transition: transform 0.3s ease, color 0.3s ease; /* Плавный переход цвета и трансформации */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Цвет при наведении */
+    transform: scale(1.1); /* Увеличение иконок при наведении */
+}
+
+.social-icons i {
+    font-size: 40px; /* Увеличенный размер иконок */
+    transition: transform 0.3s ease; /* Плавный переход трансформации */
+}
+
+/* Анимация вращения иконок */
+.social-icons a:hover i {
+    transform: rotate(360deg); /* Вращение иконок при наведении */
 }
