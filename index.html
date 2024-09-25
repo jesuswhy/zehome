@@ -74,30 +74,94 @@
         <!-- Accordion for Categories -->
         <div class="category-list">
             <div class="category-item">
-                <button class="accordion">Электроника</button>
+                <button class="accordion">Золото/украшения</button>
                 <div class="panel">
                     <div class="subcategory-list">
-                        <label><input type="checkbox" value="Смартфоны"> Смартфоны</label>
-                        <label><input type="checkbox" value="Ноутбуки"> Ноутбуки</label>
-                        <label><input type="checkbox" value="Телевизоры"> Телевизоры</label>
+                        <label><input type="checkbox" value="Золото/украшения"> Золото/украшения</label>
                     </div>
                 </div>
             </div>
             <div class="category-item">
-                <button class="accordion">Косметика</button>
+                <button class="accordion">Игровые приставки</button>
                 <div class="panel">
                     <div class="subcategory-list">
-                        <label><input type="checkbox" value="Кремы"> Кремы</label>
-                        <label><input type="checkbox" value="Парфюм"> Парфюм</label>
+                        <label><input type="checkbox" value="Sony playstation"> Sony playstation</label>
                     </div>
                 </div>
             </div>
             <div class="category-item">
-                <button class="accordion">Бытовая техника</button>
+                <button class="accordion">Фотокамеры</button>
                 <div class="panel">
                     <div class="subcategory-list">
-                        <label><input type="checkbox" value="Кремы"> Холодильники</label>
-                        <label><input type="checkbox" value="Парфюм"> Духовки</label>
+                        <label><input type="checkbox" value="Canon фотоаппараты"> Canon фотоаппараты</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-item">
+                <button class="accordion">Электроника и бытовая технгика</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Xiaomi"> Xiaomi</label>
+                        <label><input type="checkbox" value="Braun"> Braun</label>
+                        <label><input type="checkbox" value="Tefal"> Tefal</label>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Медель</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="IKEA"> IKEA</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Линзы</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Линзы"> Линзы</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Молокоотсосы</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Молокоотсосы"> Молокоотсосы</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Детская посуда</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Детская посуда"> Детская посуда</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Подгузники</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Подгузники"> Подгузники</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">Тонометры</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="Тонометры"> Тонометры</label>
+                    </div>
+                </div>
+            </div>
+            <div class="category-item">
+                <button class="accordion">БАДы</button>
+                <div class="panel">
+                    <div class="subcategory-list">
+                        <label><input type="checkbox" value="БАДы"> БАДы</label>
                     </div>
                 </div>
             </div>
@@ -229,11 +293,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Define unique prices for each subcategory
     const subcategoryPrices = {
-        "Смартфоны": 15000,
-        "Ноутбуки": 20000,
-        "Телевизоры": 18000,
-        "Кремы": 12000,
-        "Парфюм": 14000
+        "Золото/украшения": 350000,
+        "Sony playstation": 750000,
+        "Canon фотоаппараты": 350000,
+        "Xiaomi": - 350000,
+        "IKEA": 180000,
+        "Линзы": 200000,
+        "Молокоотсосы": 250000,
+        "Детская посуда": 150000,
+        "Braun": 450000,
+        "Tefal": 350000,
+        "Подгузники": 150000,
+        "Тонометры": 150000,
+        "БАДы": 150000
     };
 
     // Update price based on selected subcategories
