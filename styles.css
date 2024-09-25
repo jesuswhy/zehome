@@ -128,14 +128,29 @@ img {
     position: relative;
     display: inline-block;
     color: transparent; /* Makes the text transparent */
-    background: linear-gradient(135deg, #0070f3, #00c6ff, #0070f3); /* The gradient colors */
+    background: linear-gradient(135deg, #0070f3, #00c6ff, #0070f3, #00c6ff, #0070f3); /* Gradient with more transitions */
     background-clip: text; /* Clipping the background to the text */
     -webkit-background-clip: text; /* For Safari */
     font-size: 130px;
     font-weight: bold;
-    animation: shimmer 2s infinite; /* Applying the animation */
-    background-size: 400px 100%; /* Size of the gradient */
+    animation: shimmer 7s ease-in-out infinite;
+    background-size: 400% 100%; /* Increased size of the gradient for smoother transitions */
 }
+
+@keyframes shimmer {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
 
 .hero-subtitle {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -205,11 +220,19 @@ img {
     padding: 80px 20px;
     background-color: #f7f7f7;
     text-align: center;
+    opacity: 0; /* Элементы невидимы при загрузке */
+    transform: translateY(20px); /* Лёгкий сдвиг вниз */
+    animation: fadeIn 1.5s ease-out forwards; /* Плавное появление секции */
+    animation-delay: 0.5s; /* Задержка перед началом анимации */
 }
 
 .services-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 0.7s;
 }
 
 .services-list {
@@ -225,6 +248,10 @@ img {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
+    opacity: 0; /* Невидимы при загрузке */
+    transform: scale(0.8); /* Уменьшены в размере */
+    animation: fadeInScale 1.5s ease-out forwards; /* Плавное появление с увеличением */
+    animation-delay: calc(0.8s + var(--i) * 0.2s); /* Задержка для каждого элемента списка */
 }
 
 .service-icon {
@@ -232,6 +259,30 @@ img {
     height: 40px;
     margin-right: 10px;
 }
+
+/* Анимации */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Элементы чуть ниже своего положения */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Элементы возвращаются на исходное место */
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Элементы уменьшены */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Элементы увеличиваются до нормального размера */
+    }
+}
+
 
 /* Секция "Категории" */
 .categories-section {
@@ -255,14 +306,7 @@ img {
     padding: 20px;
 }
 
-@keyframes shimmer {
-    0% {
-        background-position: -200px 0;
-    }
-    100% {
-        background-position: 200px 0;
-    }
-}
+
 
 
 .panel {
