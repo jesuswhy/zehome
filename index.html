@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KASCAT</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-d+oPUjyzsLsPPd6X7eDf1g1H+XJfqTLwhT38UBpAqQg8F1D8XoM9H8G+bS7v7jtZNVtvfVwxn+jEO/UhJmYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script defer src="scripts.js"></script>
-</head>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KASCAT</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        
+        <!-- Подключаем jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <!-- Подключаем Slick -->
+        <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+        <!-- Ваши собственные скрипты -->
+        <script defer src="scripts.js"></script>
+    </head>
+    
+
 <body>
     <header class="header">
         <nav class="navbar">
@@ -29,6 +40,7 @@
             <p class="hero-date">Официально. По договору</p>
         </div>
     </section>
+    
     
 
     <!-- О нас -->
@@ -52,14 +64,33 @@
 
     <!-- Услуги -->
     <section id="services" class="services-section">
-        <h2>Услуги</h2>
+        <h2>Что мы предлагаем</h2>
         <ul class="services-list">
-            <li style="--i: 0;"><img class="service-icon" src="https://cdn-icons-png.flaticon.com/128/1621/1621997.png" alt="Icon 1">Помощь в регистрации</li>
-            <li style="--i: 1;"><img class="service-icon" src="https://cdn-icons-png.flaticon.com/128/4989/4989752.png" alt="Icon 2"> Открытие категорий</li>
-            <li style="--i: 2;"><img class="service-icon" src="https://cdn-icons-png.flaticon.com/128/975/975653.png" alt="Icon 3">Консультации по продажам</li>
+            <li style="--i: 0;"><img class="service-icon" src="https://cdn-icons-png.flaticon.com/128/9414/9414865.png" alt="Icon 1">Откройте доступ к прибыльным категориям и начните зарабатывать в несколько раз больше</li>
+            <li style="--i: 1;"><img class="service-icon" src="https://cdn-icons-png.flaticon.com/128/4388/4388232.png" alt="Icon 2"> С нашей помощью вы сможете начать продавать уже через несколько дней, без лишней бюрократии и головной боли</li>
+            <li style="--i: 2;"><img class="service-icon" src="https://cdn-icons-png.flaticon.com/128/5784/5784024.png" alt="Icon 3">Зарабатывайте от 18% до 30% маржи на товарах, которые всегда востребованы</li>
         </ul>
         
     </section>
+
+    <div class="new-text-section">
+        <h2>Почему выбирают нас</h2>
+        <p>Не знаете, какой товар выбрать? Мы подскажем вам проверенные ниши, где прибыль стабильна, а конкуренция минимальна.</p>
+        
+        <div class="carousel-container">
+            <div class="carousel">
+                <div><img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-digital-edition-ps4-black-external-hdd-image-block-01-en-01dec21?$facebook$" alt="Фото 1" class="carousel-img"></div>
+                <div><img src="https://i1.adis.ws/i/canon/eos_1300d-ef-s18-55-iii-fra_6cdba408120c4b5eb159c047f4de38ea" alt="Фото 2" class="carousel-img"></div>
+                <div><img src="https://cdn.vamdodoma.ru/images/ikea-pl/69/a1/df5f4cfbe8fbc2623d8342087ee84fab1d11.jpg" alt="Фото 3" class="carousel-img"></div>
+                <div><img src="https://api.magonline.ru/thumbnail/740x494/20/084/20084.png" alt="Фото 4" class="carousel-img"></div>
+            </div>
+        </div>
+        
+    
+        <p>Закрытые категории на KASPI.KZ защищены от демпинга и перенасыщения товарами, что гарантирует стабильные продажи.</p>
+        <p>Открыв доступ к закрытым категориям сейчас, вы получаете преимущества, которые недоступны большинству. Не упустите шанс занять своё место на рынке.</p>
+    </div>
+    
 
     <section id="categories" class="categories-section">
         <h2>Категории</h2>
@@ -82,29 +113,14 @@
                 </div>
             </div>
             <div class="category-item">
-                <button class="accordion">Игровые приставки</button>
-                <div class="panel">
-                    <div class="subcategory-list">
-                        <label><input type="checkbox" value="Sony playstation"> Sony Playstation</label>
-                    </div>
-                </div>
-            </div>
-            <div class="category-item">
-                <button class="accordion">Фотокамеры</button>
-                <div class="panel">
-                    <div class="subcategory-list">
-                        <label><input type="checkbox" value="Canon фотоаппараты"> Canon фотоаппараты</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="category-item">
                 <button class="accordion">Электроника</button>
                 <div class="panel">
                     <div class="subcategory-list">
                         <label><input type="checkbox" value="Xiaomi"> Xiaomi</label>
                         <label><input type="checkbox" value="Braun"> Braun</label>
                         <label><input type="checkbox" value="Tefal"> Tefal</label>
+                        <label><input type="checkbox" value="Canon фотоаппараты"> Canon фотоаппараты</label>
+                        <label><input type="checkbox" value="Sony playstation"> Sony playstation</label>
                     </div>
                     
                 </div>
@@ -118,18 +134,14 @@
                 </div>
             </div>
             <div class="category-item">
-                <button class="accordion">Линзы</button>
+                <button class="accordion">Аптека</button>
                 <div class="panel">
                     <div class="subcategory-list">
                         <label><input type="checkbox" value="Линзы"> Линзы</label>
-                    </div>
-                </div>
-            </div>
-            <div class="category-item">
-                <button class="accordion">Молокоотсосы</button>
-                <div class="panel">
-                    <div class="subcategory-list">
                         <label><input type="checkbox" value="Молокоотсосы"> Молокоотсосы</label>
+                        <label><input type="checkbox" value="Подгузники"> Подгузники</label>
+                        <label><input type="checkbox" value="Тонометры"> Тонометры</label>
+                        <label><input type="checkbox" value="БАДы"> БАДы</label>
                     </div>
                 </div>
             </div>
@@ -141,35 +153,12 @@
                     </div>
                 </div>
             </div>
-            <div class="category-item">
-                <button class="accordion">Подгузники</button>
-                <div class="panel">
-                    <div class="subcategory-list">
-                        <label><input type="checkbox" value="Подгузники"> Подгузники</label>
-                    </div>
-                </div>
-            </div>
-            <div class="category-item">
-                <button class="accordion">Тонометры</button>
-                <div class="panel">
-                    <div class="subcategory-list">
-                        <label><input type="checkbox" value="Тонометры"> Тонометры</label>
-                    </div>
-                </div>
-            </div>
-            <div class="category-item">
-                <button class="accordion">БАДы</button>
-                <div class="panel">
-                    <div class="subcategory-list">
-                        <label><input type="checkbox" value="БАДы"> БАДы</label>
-                    </div>
-                </div>
-            </div>
+
             
             <!-- Add more categories as needed -->
         </div>
         <span style="color: #adadad;">Для открытия других категорий, оставьте заявку </span> <!-- Цвет текста задан здесь -->
-        <p id="price-output">Итоговая цена: 0 ₸</p>
+        <p id="price-output">Примерная цена: от 0 ₸</p>
         <button id="leave-request">Открыть категории</button>
     </section>
     
@@ -179,20 +168,38 @@
         <section id="faq" class="faq-section">
             <h2>FAQ</h2>
             <details>
-                <summary>Как работает ваша услуга?</summary>
-                <p>Мы помогаем открыть категории на KASPI.KZ официально.</p>
+                <summary>Как долго занимает процесс открытия доступа к закрытым категориям?</summary>
+                <p>Это зависит от выбранной категории и наличия всех необходимых документов. В среднем процесс может занять от 1 до 7 дней. 
+                </p>
             </details>
             <details>
-                <summary>Как много времени занимает процесс?</summary>
-                <p>Процесс открытия категорий занимает от 3 до 7 дней.</p>
+                <summary>Могу ли я сразу начать продавать, как только доступ открыт?</summary>
+                <p>Да, как только доступ к закрытой категории открыт и все документы одобрены, вы можете сразу размещать товары и начинать продажи.</p>
             </details>
             <details>
-                <summary>Как работает ваша услуга?</summary>
-                <p>Мы помогаем открыть категории на KASPI.KZ официально.</p>
+                <summary>Могут ли закрыть мой магазин или заблокировать товары?</summary>
+                <p>Если вы будете работать с нами, то риск блокировки магазина и категории сводится к 0.
+                </p>
             </details>
             <details>
-                <summary>Как много времени занимает процесс?</summary>
-                <p>Процесс открытия категорий занимает от 3 до 7 дней.</p>
+                <summary>Можно ли открыть несколько закрытых категорий сразу?</summary>
+                <p>Да, с нашей помощью вы сможете открыть несколько категорий, и сразу начать работать в них. 
+                </p>
+            </details>
+            <details>
+                <summary>Какие риски связаны с продажей в закрытых категориях?</summary>
+                <p>Основные риски связаны с несоблюдением правил платформы или ошибками в подаче документов. Мы поможем вам минимизировать эти риски и безопасно начать продажи.
+                </p>
+            </details>
+            <details>
+                <summary>Будут ли предоставлены документы для договора на заключение сделки ? </summary>
+                <p>Да конечно , мы работаем официально, по договору.
+                </p>
+            </details>
+            <details>
+                <summary>Буду ли я в курсе как вы это делаете?</summary>
+                <p>Да, мы сможем посвятить вас в процесс нашей работы если вам это интересно, потому что мы работаем в открытую.
+                </p>
             </details>
         </section>
 
@@ -230,6 +237,7 @@
                 <div class="social-icons">
                     <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://t.me/prokaspikascat" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://wa.me/7077407714" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>     
                  
@@ -292,6 +300,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
+
     // Define unique prices for each subcategory
     const subcategoryPrices = {
         "Золото/украшения": 350000,
@@ -327,7 +337,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         totalPrice -= totalPrice * discount;
-        document.getElementById("price-output").textContent = `Итоговая цена: ${totalPrice} ₸ (Скидка: ${discount * 100}%)`;
+        document.getElementById("price-output").textContent = `Примерная цена: от ${totalPrice} ₸ (Скидка: ${discount * 100}%)`;
     };
 
     // Привязка события изменения к чекбоксам
@@ -345,7 +355,17 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
     });
 });
-
+$(document).ready(function(){
+    $('.carousel').slick({
+        infinite: true, // Бесконечная карусель
+        slidesToShow: 1, // Показывать по 1 слайду
+        slidesToScroll: 1, // Прокручивать по 1 слайду
+        autoplay: true, // Автоматическая прокрутка
+        autoplaySpeed: 2000, // Скорость автопрокрутки (2 секунды)
+        arrows: true, // Стрелки для навигации
+        dots: true // Точки навигации под слайдером
+    });
+});
 </script>
 
 
