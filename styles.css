@@ -10,7 +10,7 @@
 
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat';
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
@@ -51,7 +51,7 @@ img {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #000;
 }
@@ -137,6 +137,10 @@ img {
     background-size: 400% 100%; /* Increased size of the gradient for smoother transitions */
 }
 
+.spacing {
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
 @keyframes shimmer {
     0% {
         background-position: 0 0;
@@ -165,7 +169,7 @@ img {
 .hero-date {
     font-size: 1.2rem;
     color: #555;
-    font-style: italic;
+    font-style: regular;
     margin-bottom: 30px;
 }
 
@@ -200,9 +204,11 @@ img {
 }
 
 .about-section h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
+
+
 
 .about-section p {
     font-size: 1.2rem;
@@ -289,6 +295,7 @@ img {
     text-align: center;
     padding: 50px 20px;
     background-color: #ffffff00;
+    font-family: 'Poiret One';
 }
 
 .categories-section h2 {
@@ -410,7 +417,6 @@ img {
 
 /* Стили для блока с текстом на сайте */
 .new-text-section {
-    background-color: #f9f9f9; /* Светлый фон для выделения секции */
     padding: 40px 20px; /* Внутренние отступы для пространства */
     margin-bottom: 20px; /* Отступ снизу */
     padding: 80px 20px;
@@ -426,7 +432,7 @@ img {
 
 .new-text-section p {
     font-size: 18px;
-    color: #666; /* Второстепенный текст */
+    color: #000000; /* Второстепенный текст */
     line-height: 1.6; /* Интерлиньяж для удобочитаемости */
     margin-bottom: 20px;
 }
@@ -534,7 +540,7 @@ img {
 
 .contact-section button {
     padding: 12px 20px;
-    background-color: #0070f3;
+    background-color: #181818;
     color: white;
     border: none;
     border-radius: 5px;
@@ -544,12 +550,12 @@ img {
 }
 
 .contact-section button:hover {
-    background-color: #005bb5;
+    background-color: #707070;
 }
 
 /* Подвал */
 .footer {
-    background-color: #000000;
+    background-color: #3b3b3e;
     color: #fff;
     padding: 40px 20px 20px 20px;
 }
